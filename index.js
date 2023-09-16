@@ -6,7 +6,6 @@ app.listen(port)
 
 app.get('/query', async (req, res) => {
   const query = req.query.query
-  console.log(query)
   res.set('Content-Type', 'application/json')
   const result = await fetch('https://api.openai.com/v1/chat/completions', {
     body: JSON.stringify({
